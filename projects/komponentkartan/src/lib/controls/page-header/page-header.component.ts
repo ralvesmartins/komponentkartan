@@ -1,4 +1,4 @@
-import { Component, Input, ViewChild, AfterViewChecked, ElementRef, HostListener } from '@angular/core';
+import { Component, Input, ViewChild, AfterViewChecked, ElementRef } from '@angular/core';
 import { PageHeaderHeightService } from '../../services/page-header-height.service';
 
 @Component({
@@ -12,14 +12,12 @@ export class PageHeaderComponent implements AfterViewChecked {
   height = 0;
   private previousHeight = 0;
 
-  visibleState = false;
-
   constructor(private pageHeaderHeightService: PageHeaderHeightService) {}
 
   ngAfterViewChecked() {
     this.setHeight();
-
   }
+
 
   setHeight() {
     this.height = this.pageHeader.nativeElement.offsetTop
