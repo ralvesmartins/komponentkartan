@@ -16,7 +16,6 @@ export class PageComponent implements OnInit, OnDestroy {
   constructor(private pageHeaderHeightService: PageHeaderHeightService) { }
 
   ngOnInit() {
-   
     let margin =  window.innerWidth < 1366 ? 10 : 20;
 
     this.bodyContainer.nativeElement.style.top = `${this.pageHeaderHeightService.height + margin }px`;
