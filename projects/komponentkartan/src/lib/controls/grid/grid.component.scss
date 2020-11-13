@@ -3,7 +3,7 @@
 @import "../../../assets/partials/_settings.fonts.scss";
 
   :host {
-    max-width: 1100px;
+    width: $content-width--small;
     display: block;
     box-sizing: border-box;
     padding-bottom: 20px;
@@ -213,7 +213,7 @@
 
   @media screen and (min-width: $desktop-width--medium) {
     :host::ng-deep {
-      max-width: 1170px;
+      width: $content-width--medium;
 
       vgr-grid-header {
         padding-left: 10px;
